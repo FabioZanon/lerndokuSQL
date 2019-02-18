@@ -12,14 +12,123 @@ header {
 
    display: flex;
    justify-content: space-between;
-   background-color: rgb(160, 159, 159);
+   background-color: #434A53;
    left: 0px;
    right: 0px;
+   border-style: solid;
+   border-width: 1px;
+   border-color: black;
+   height: 1.5cm;
 }
 
 
 
 h2 {
 
- margin-left: 650px;
+ margin-left: 620px;
+ font-family: 'Source Code Pro', monospace;
+ margin-top: 10px;
+ color: white;
 }
+
+.dropbtn {
+    background-color: #434A53;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    height: 1.5cm;
+    margin-right: 9fsfjdjfjkdjfjfsjfj0px;
+    font-family: 'Source Code Pro', monospace;
+   
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 60px;
+    height: 1.5cm;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #434a5341;
+    min-width: 160px;
+    margin-right: 30px; 
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: white; 
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Source Code Pro', monospace;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #25262a;
+    color: #c5c4c4;
+    transition: .5s;
+}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+    background-color: #383d44;
+    transition: .5s;
+  }
+
+  p {
+
+    color: rgb(211, 210, 210);
+    font-family: 'Source Code Pro', monospace;
+    text-align: center;
+    
+      
+  }
+
+  .divp {
+   margin-left: 330px;
+    max-width: 1000px;
+    margin-top: 150px;
+    text-align: justify;
+  }
+
+  h3 {
+    text-align: center;
+    font-family: 'Source Code Pro', monospace;
+    color: white;
+    margin-top: 10px;
+   }
+
+   .divp2 {
+    margin-left: 330px;
+     max-width: 1000px;
+     text-align: justify;
+   }
+     
+  .divbilder {
+
+    display: flex;
+    justify-content: center;
+    
+  }
+
+  img {
+
+    border-radius: 9px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+  }

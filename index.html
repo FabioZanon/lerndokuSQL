@@ -1,21 +1,89 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
     <title>SQL Dokumentation</title>
 </head>
-<body>
-    
-    <header>
-       
-        <h2>Datenbanken mit SQL bearbeiten</h2>
-    
- 
-</header>
 
-    
+<body>
+
+    <header>
+        <h2>Datenbanken mit SQL bearbeiten</h2>
+
+        <div class="dropdown">
+            <button class="dropbtn"><b>Grundlagen</b></button>
+            <div class="dropdown-content">
+                <a href="#"><b>MySQL Dienst starten/beenden</b></a>
+                <a href="#"><b>Erstellen einer Datenbank</b></a>
+                <a href="#"><b>Erstellen einer Tabelle</b></a>
+                <a href="#"><b>Befehlsliste der Grundlagen</b></a>
+            </div>
+        </div>
+
+
+
+
+    </header>
+
+    <div class="divp">
+        <p>SQL ist die meist verbreitete Sprache, die heutzutage für Datenbanken verwendet wird. In dieser Lerndokumentation
+            befindet sich all das, was man wissen sollte.</p>
+    </div>
+    <br />
+    <br />
+    <br />
+    <h3> MySQL Dienst
+    </h3>
+    <div class="divp2">
+        <p><i>Die Lerndukumentation basiert auf der Linux Distribution Linux 105 4.4.0-142-generic #168-Ubuntu</i></p>
+        <br />
+        <p>Als erstes muss man den MySQL Dienst starten. Damit benutzt man den Befehtl über das Init-Skript. Nägmlich: '/etc/init.d/mysql'.
+            Nachdem man den Befehl eingegeben hat, kommt eine Bestätigung, dass der MySQL-Server gestartet werden konnte.
+            Von nun an läuft der Dienst selber. Das bedeutet, dass wenn man das Terminal schliesst, läuft der MySQL Dienst
+            im Hintergrund weiter. Das ist zum Beispiel vergleichbar mit einer Antivierensoftware. Wenn man das Fenster schliesst,
+            läuft die Anwendung trotzdem weiter.
+        </p>
+
+        <p>Nun muss man noch die Konsole starten, damit man mit MySQL programmieren kann. für dies gibt man ein 'mysql -u
+            root -p'. Hierbei steht '-u' für 'user' und '-p' dafür, damit das Passwort abgefragt werden soll. Danach folgt
+            logischerweise eine Passworteingabe. </p>
+        <p>Man kann das Passwort für den MySQL Dienst auch beliebig ändern. Für dies, ist folgender Befehl notwendig: 'set
+            password for root@localhost=Password('DeinPasswort');</p>
+    </div>
+    <br />
+    <h3>Erstellen einer Datenbank</h3>
+    <div class="divp2">
+
+        <p>Eine neue Datenbank erstellt man ganz einfach mit: 'create database archiv;'. Nun hat man eine neue Datenbank
+            erstellt und sie, wie man sieht, nach 'archiv' benannt. Nun kann man diese Datenbank (die jetzt natürlich leer
+            ist) anzeigen lassen mit: 'show databases;'. Nun wird eine Liste angezeigt mit allen Datenbanken, die auf diesem
+            Computer bei MySQL registriert sind. In diesem Fall nur eine, nähmlich 'archiv'.
+        </p>
+        <div class="divbilder">
+            <img src="img/datenbankerstellen.PNG" alt="datenbank">
+        </div>
+        <p>Damit man mit dieser Datenbank arbeiten kann, muss man sie zuerst anwählen. Mit 'use archiv;' wird diese ganz
+            einfach ausgewählt. 'Database change' wird angezeigt.</p>
+        <br />
+        <div class="divbilder">
+            <img src="img/usearchiv.PNG" alt="usearchiv">
+        </div>
+
+
+    </div>
+
+
+    <br />
+    <br />
+
+
+
+    </div>
 </body>
+
 </html>
