@@ -4,5 +4,22 @@ body {
 background-image: url(img/code-wallpaper-2.jpg);
 background-size: cover;
 background-position: fixed;
+margin: 0;
 
+}
+
+header {
+
+   display: flex;
+   justify-content: space-between;
+   background-color: rgb(160, 159, 159);
+   left: 0px;
+   right: 0px;
+}
+
+
+
+h2 {
+
+ margin-left: 650px;
 }
