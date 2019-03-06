@@ -294,10 +294,115 @@ width: 35em;
 
 .bildmedia {
 
-width: 27em;
-height: 5em;
+width: 15em;
+height: 2em;
 
 }
 
 
 }
+
+
+@media (max-width: 730px) {
+
+
+
+  .bildmedia2 {
+  
+  width: 15em;
+  height: 30em;
+  
+  }
+  
+  
+  }
+
+
+  @media (max-width: 730px) {
+
+
+
+    .bildmedia3 {
+    
+    width: 15em;
+    height: 20em;
+    
+    }
+    
+    
+    }
+
+    @media (max-width: 730px) {
+
+
+
+      .bildmedia4 {
+      
+      width: 18em;
+      height: 4em;
+      
+      }
+      
+      
+      }
+
+      @media (max-width: 730px) {
+
+
+
+        .bildmedia5 {
+        
+        width: 18em;
+       
+        
+        }
+        
+        
+        }
+
+        @media (max-width: 730px) {
+
+
+
+          .bildmedia6 {
+          
+          width: 18em;
+          height: 4em;
+         
+          
+          }
+          
+          
+          }
+
+
+          @media (max-width: 730px) {
+
+
+
+            .bildmedia7 {
+            
+            width: 18em;
+            height: 4em;
+           
+            
+            }
+            
+            
+            }
+
+
+            @media (max-width: 730px) {
+
+
+
+              .bildmedia8 {
+              
+              width: 18em;
+              height: 7em;
+             
+              
+              }
+              
+              
+              }
