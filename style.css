@@ -180,3 +180,63 @@ a {
   color: #6c71ca;
   text-decoration: none;
 }
+
+
+.table {
+  max-width: 85%;
+  border: black 1px;
+  font-size: 16px;
+  margin: 5% auto;
+}
+
+.table_small{
+    margin: 0% auto;
+    width: 90%;
+}
+ 
+
+
+  
+
+
+ 
+td {
+  background:#eeecec;
+  font-family: 'Muli', sans-serif;
+  padding: 20px;
+  text-align:left;
+  vertical-align:middle;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  border: 1px solid;
+}
+
+.abstand {
+
+
+  width: 233px;
+}
+
+
+footer {
+
+ 
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8em;
+  background-color: #e6e6e6;
+}
+
+.pfooter {
+
+  font-family: 'Muli', sans-serif;
+
+
+}
+
+.divfooter {
+
+display: flex;
+justify-content: center;
+
+}
