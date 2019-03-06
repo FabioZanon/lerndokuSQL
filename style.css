@@ -192,8 +192,10 @@ a {
 .table_small{
     margin: 0% auto;
     width: 90%;
+    
 }
  
+
 
 
   
@@ -204,6 +206,7 @@ td {
   background:#eeecec;
   font-family: 'Muli', sans-serif;
   padding: 20px;
+  
   text-align:left;
   vertical-align:middle;
   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
@@ -406,3 +409,5 @@ height: 2em;
               
               
               }
+
+              
