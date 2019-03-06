@@ -22,9 +22,9 @@
                     <a href="#anker6">Löschen von Datenbanken und Tabellen</a>
                     <a href="#anker7">Datentypen und deren Funktion</a>
                     <a href="#anker8">User erstellen und Rechte vergeben</a>
-                    <a href="#">Datensätze importieren</a>
-                    <a href="#">JOINS</a>
-                    <a href="#">Sprachschichten</a>
+                    <a href="#anker9">Datensätze importieren</a>
+                    <a href="#anker10">JOINS</a>
+                    <a href="#anker11">Sprachschichten</a>
             </div>
         </div>
         <div class="divdoku">
@@ -38,7 +38,7 @@
 
 
 
-            <div class="textfeld"><h3>MYSQL Dienst starten/beenden</h3></div>
+            <div class="textfeld"><h3 id="anker1">MYSQL Dienst starten/beenden</h3></div>
             <div class="textfeld"><p>Als erstes muss man den MySQL Dienst starten. Damit benutzt man den Befehtl über das Init-Skript.
                     Nägmlich: '/etc/init.d/mysql'. Nachdem man den Befehl eingegeben hat, kommt eine Bestätigung, dass
                     der MySQL-Server gestartet werden konnte. Von nun an läuft der Dienst selber. Das bedeutet, dass
@@ -65,7 +65,7 @@
 
 
 
-            <div class="textfeld"><h3>Erstellen einer Datenbank</h3></div>
+            <div class="textfeld"><h3 id="anker2">Erstellen einer Datenbank</h3></div>
             <div class="textfeld"><p>Eine neue Datenbank erstellt man ganz einfach mit: 'create database archiv;'. Nun hat man eine
                     neue Datenbank erstellt und sie, wie man sieht, nach 'archiv' benannt. Nun kann man diese Datenbank
                     (die jetzt natürlich leer ist) anzeigen lassen mit: 'show databases;'. Nun wird eine Liste angezeigt
@@ -88,7 +88,7 @@
 
 
 
-            <div class="textfeld"><h3>Erstellen einer Tabelle</h3></div>
+            <div class="textfeld"><h3 id="anker3">Erstellen einer Tabelle</h3></div>
             <div class="textfeld"><p>In einer Datenbank befindet sich immer einer oder mehrere Tabelle/n. Ohne diese können ja alle
                     Daten nicht eingetragen werden. Nun erstellen wir eine Tabelle in der Datenbank "archiv", die wir
                     gerade erstellt haben.</p></div>
@@ -125,7 +125,7 @@
 
 
 
-                    <div class="textfeld"><h3>Datenbankmodell</h3></div>
+                    <div class="textfeld"><h3 id="anker4">Datenbankmodell</h3></div>
                     <div class="textfeld"><p>Ein Datenbank-Modell beschreibt, wie eine Datenbank aufgebaut ist, welche Verbindungen mehrere 
                         Entitäten miteinandere haben und welche Primären- und Fremd-Schlüssel Sie besitzen. So ein Modell ist vorallem bei 
                         relationalen Datenbanken hilfreich, da diese sehr komplex aufgebaut sind. Ein gutes Beispiel ist die obige Datenbank, denn 
@@ -153,7 +153,7 @@
 
 
 
-            <div class="textfeld"><h3>Tabelle bearbeiten</h3></div>
+            <div class="textfeld"><h3 id="anker5">Tabelle bearbeiten</h3></div>
             <div class="textfeld"><p>Wenn man eine Tabelle mit deren Inhalt erstellt hat, aber noch gerne ein weiteres Attribut
                     hinzufügen möchte, ist folgender Befehl hilfreich:</p></div>
             <div class="textfeld"><p>ALTER TABLE akten ADD column Kommentar VARCHAR(100);</p></div>
@@ -180,7 +180,7 @@
 
                 
               
-            <div class="textfeld"><h3>Löschen von Datenbanken und Tabellen</h3></div>
+            <div class="textfeld"><h3 id="anker6">Löschen von Datenbanken und Tabellen</h3></div>
             <div class="textfeld"><p>Löschen einer Datenbank:</p></div>
             <div class="img"><img src="img/datenbanklöschen.PNG" alt="Löschen einer Datenbank"></div>
             <div class="textfeld"><p>Löschen einer Tabelle:</p></div>
@@ -201,7 +201,7 @@
             
             
             
-            <div class="textfeld"><h3>Datentypen und deren Funktion</h3></div>
+            <div class="textfeld"><h3 id="anker7">Datentypen und deren Funktion</h3></div>
 
             
             <dt>VARCHAR</dt>
@@ -236,7 +236,7 @@
 
 
 
-            <div class="textfeld"><h3>User erstellen und Rechte geben</h3></div>
+            <div class="textfeld"><h3 id="anker8">User erstellen und Rechte geben</h3></div>
             <div class="textfeld"><p>Einen MySQL User erstellen:</p></div>
             <div class="textfeld"><p>CREATE USER hans@localhost IDENTIFIED BY 'passwort';</p></div>
             <div class="textfeld"><p>"@localhost" steht für lokal bzw. hans = lokaler Benutzer, "IDENTIFIED BY 'passwort'" = Passwortvergabe
@@ -257,7 +257,7 @@
     
 
 
-            <div class="textfeld"><h3>Datensätze importieren</h3></div>
+            <div class="textfeld"><h3 id="anker9">Datensätze importieren</h3></div>
             <div class="textfeld"><p>In eine Tabelle gehören logischerweise auch Daten. Da die ungerne in SQL selber hineingeschrieben
                     werden, importiert man sie meistens aus einer Excel-Tabelle.</p></div>
 
@@ -297,7 +297,7 @@
 
 
 
-                <div class="textfeld"><h3>JOINS</h3></div>
+                <div class="textfeld"><h3 id="anker10">JOINS</h3></div>
                 <div class="textfeld"><p>Die Aufgabe von JOINS ist es, mehrere Tabellen in einer Abfrage (Query) zu verknüpfen, damit der 
                     Mitarbeiter zum Beispiel auslesen kann, welche 
                     Produkte ein Kunde bestellt hat, was hat er für einen Gesamtbestellwert und noch vieles mehr. Es gibt vier verschiedene Arten von 
@@ -322,7 +322,7 @@
                             die noch nie bestellt wurden. Praktisch für alle Abfragen, die so zu sagen "Negativ" sind. <i>Syntax:</i></p></div>
                         <div class="img"><img src="img/leftinnerjoinSQL.PNG" alt="Left/Right inner JOIN"></div>
                         <br />
-                        <div class="textfeld"><p><b><i>Full Outer JOIN</i></b></p></div>
+                        <div class="textfeld"><p><b><i id="verlinkung">Full Outer JOIN</i></b></p></div>
                         <div class="textfeld"><p>Der Full Outer JOIN wird noch weniger verwendet als der Left/Right inner JOIN. Er wird benötigt, wenn man zum Beispiel von einer Datenbank 
                             alle Bestellungen von allen Kunden anzeigen lassen will. Speziell an dem Full Outer jOIN ist, dass dieser zwei Selektierungsanfragen besitzt (SELECT). Darum wird auch 
                             der Befehl "UNION" gebraucht. <i>Syntax:</i></p></div>
@@ -350,9 +350,9 @@
                             <div class="img"><img src="img/RightOuterJOIN.PNG" alt="Right/Left Outer JOIN"></div>
                             <br />
                           
+                            <hr>
 
-
-                        <div class="textfeld"><h3>Sprachschichten in SQL</h3></div>
+                        <div class="textfeld"><h3 id="anker11">Sprachschichten in SQL</h3></div>
                         <div class="textfeld"><p>Jeder Befehl in MySQL gehört zur irgend einer Sprachschicht. Eine Sprachschicht beinhaltet eine handvoll Kommandos zum erstellen von Datenbanken, erstellen von 
                         Tabellen, Bearbeiten einer DB/Tabelle, Vergabe von Benutzerrechten, Hinzufügen oder Bearbeiten von Datensätzen und um Datensätze auszulesen. Hier geht es zu den 4 verschiedenen Sprachschichten:</p></div>
                         <div class="textfeld">
@@ -360,7 +360,7 @@
                                 <ul>
 
                                         <li>Data Definition Language</li>
-                                        <li>Data Queri Language</li>
+                                        <li>Data Query Language</li>
                                         <li>Data Control Language</li>
                                         <li>Data Manipulation Language</li>
 
@@ -368,9 +368,32 @@
 
                         </div>
                         <div class="textfeld"><p><b><i>Data Definition Language</i></b></p></div>
-                        <div class="textfeld"><p>Die Data Definition Language umfängt drei Befehle: ALTER, CREATE und DROP. ALTER wird benötigt, um Datenbanken und 
-                                Tabellen zu bearbeiten. Mit CREATE erstelle man DB und TB und mit DROP kann man diese löschen. <i>Folgende Syntax zeigen die Funktion:</i>
+                        <div class="textfeld"><p>Die Data Definition Language umfängt drei Hauptbefehle: ALTER, CREATE und DROP. ALTER wird benötigt, um Datenbanken und 
+                        Tabellen zu bearbeiten. Mit CREATE erstelle man DB und TB und mit DROP kann man diese löschen. <i>Folgende Syntax zeigen die Funktion:</i></p></div>
+                        <div class="textfeld"><p>Datenbank/Tabelle erstellen:</p></div>
+                        <div class="img"><img src="img/createDBTBLsyntax.PNG" alt="Datenbank und Tabelle erstellen"></div>
+                        <div class="textfeld"><p>Verändern von Datenbanken und Tabellen:</p></div>
+                        <div class="img"><img src="img/ALTERtableALTERdatabase.PNG" alt="Tabelle und Datenbank bearbeiten"></div>
+                        <div class="textfeld"><p>Löschen von Datenbank und Tabelle:</p></div>
+                        <div class="img"><img src="img/DATABASElöschenundTABLE.PNG" alt="Löschen von Datenbank und Tabelle"></div>
+                        <div class="textfeld"><p>Attribute einer Tabelle anzeigen lassen:</p></div>
+                        <div class="img"><img src="img/DESCRIBEtable.PNG" alt="Attribute einer Tabelle anzeigen lassen"></div>
+                        <br />
+                        <div class="textfeld"><p><b><i>Data Query Language</i></b></p></div>
+                        <div class="textfeld"><p>Die Data Query Language ist für und nur die Select-Anfragen zuständig. Sie ist zugleich die Wichtigste Sprachschicht in MySQL. 
+                        Die Abfragen können zum Teil sehr anspruchsvoll sein, vorallem, wenn zwei "Select" Befehle in einem Befehl vorkommen. Dies wird <a href="#verlinkung">HIER</a> beim Full Outer Join gezeigt. 
+                        "Group By" steht für eine Gruppierung. z.B kann man Group By verwenden bei Postleitzahlen oder Strassen. "Having" benutzt man, wenn eine Bedingung besteht. z.B: Zeig mir alle Personen an, 
+                        die von der Strasse "x,y" kommen. "Order By" ist für die Ordnung der Ausgabe zuständig. Also ob das Resultat aufgerundet oder abgerundet werden soll, oder nach welchem Attribut es sortiert 
+                        werden soll. "DESC." bedeutet, dass die Abfrage bzw. Ausgabe absteigend sortiert werden soll.
                         </p></div>
+                        <div class="textfeld"><p><i>Folgener Syntax zeigt eine Select-Abrage:</i></p></div>
+                        <div class="img"><img src="img/SELECTABFRAGE.PNG" alt="Select Abfrage"></div>
+                        <div class="textfeld"><p><b><i>Data Control Langugae</i></b></p></div>
+                        <div class="textfeld"><p>Die Data Control Language braucht man, um Benuzter zu erstellen und rechte zu vergeben.</p></div>
+                        <div class="textfeld"><p><i>Folgender Syntax zeigt, wie ein Benutzer erstellt wird.</i></p></div>
+                        <div class="img"><img src="img/DCLUSERerstellen.PNG" alt="User erstellen mit DCL"></div>
+                        <div class="img"><p><i>Einem User alle Rechte auf eine Datenbank geben:</i></p></div>
+
 
 
 
