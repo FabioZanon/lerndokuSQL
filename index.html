@@ -1,89 +1,433 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="style.css" type="text/css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
-    <title>SQL Dokumentation</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.ico">
+    <title>Lerndoku SQL</title>
 </head>
-
 <body>
+    <div class="container">
 
-    <header>
-        <h2>Datenbanken mit SQL bearbeiten</h2>
-
-        <div class="dropdown">
-            <button class="dropbtn"><b>Grundlagen</b></button>
+            <div class="dropdown">
+            <button class="dropbtn">MySQL</button>
             <div class="dropdown-content">
-                <a href="#"><b>MySQL Dienst starten/beenden</b></a>
-                <a href="#"><b>Erstellen einer Datenbank</b></a>
-                <a href="#"><b>Erstellen einer Tabelle</b></a>
-                <a href="#"><b>Befehlsliste der Grundlagen</b></a>
+                    <a href="#anker1">MySQL Dienst starten/beenden</a>
+                    <a href="#anker2">Erstellen einer Datenbank</a>
+                    <a href="#anker3">Erstellen einer Tabelle</a>
+                    <a href="#anker4">Datenbank-Modell</a>
+                    <a href="#anker5">Tabelle bearbeiten</a>
+                    <a href="#anker6">Löschen von Datenbanken und Tabellen</a>
+                    <a href="#anker7">Datentypen und deren Funktion</a>
+                    <a href="#anker8">User erstellen und Rechte vergeben</a>
+                    <a href="#">Datensätze importieren</a>
+                    <a href="#">JOINS</a>
+                    <a href="#">Sprachschichten</a>
             </div>
         </div>
-
-
-
-
-    </header>
-
-    <div class="divp">
-        <p>SQL ist die meist verbreitete Sprache, die heutzutage für Datenbanken verwendet wird. In dieser Lerndokumentation
-            befindet sich all das, was man wissen sollte.</p>
-    </div>
-    <br />
-    <br />
-    <br />
-    <h3> MySQL Dienst
-    </h3>
-    <div class="divp2">
-        <p><i>Die Lerndukumentation basiert auf der Linux Distribution Linux 105 4.4.0-142-generic #168-Ubuntu</i></p>
-        <br />
-        <p>Als ddddderstes muss man den MySQL Dienst starten. Damit benutzt man den Befehtl über das Init-Skript. Nägmlich: '/etc/init.d/mysql'.
-            Nachdem man den Befehl eingegeben hat, kommt eine Bestätigung, dass der MySQL-Server gestartet werden konnte.
-            Von nun an läuft der Dienst selber. Das bedeutet, dass wenn man das Terminal schliesst, läuft der MySQL Dienst
-            im Hintergrund weiter. Das ist zum Beispiel vergleichbar mit einer Antivierensoftware. Wenn man das Fenster schliesst,
-            läuft die Anwendung trotzdem weiter.
-        </p>
-
-        <p>Nun muss man noch die Konsole starten, damit man mit MySQL programmieren kann. für dies gibt man ein 'mysql -u
-            root -p'. Hierbei steht '-u' für 'user' und '-p' dafür, damit das Passwort abgefragt werden soll. Danach folgt
-            logischerweise eine Passworteingabe. </p>
-        <p>Man kann das Passwort für den MySQL Dienst auch beliebig ändern. Für dies, ist folgender Befehl notwendig: 'set
-            password for root@localhost=Password('DeinPasswort');</p>
-    </div>
-    <br />
-    <h3>Erstellen einer Datenbank</h3>
-    <div class="divp2">
-
-        <p>Eine neue Datenbank erstellt man ganz einfach mit: 'create database archiv;'. Nun hat man eine neue Datenbank
-            erstellt und sie, wie man sieht, nach 'archiv' benannt. Nun kann man diese Datenbank (die jetzt natürlich leer
-            ist) anzeigen lassen mit: 'show databases;'. Nun wird eine Liste angezeigt mit allen Datenbanken, die auf diesem
-            Computer bei MySQL registriert sind. In diesem Fall nur eine, nähmlich 'archiv'.
-        </p>
-        <div class="divbilder">
-            <img src="img/datenbankerstellen.PNG" alt="datenbank">
-        </div>
-        <p>Damit man mit dieser Datenbank arbeiten kann, muss man sie zuerst anwählen. Mit 'use archiv;' wird diese ganz
-            einfach ausgewählt. 'Database change' wird angezeigt.</p>
-        <br />
-        <div class="divbilder">
-            <img src="img/usearchiv.PNG" alt="usearchiv">
+        <div class="divdoku">
+            <h1><i>Lerndokumentation über SQL</i></h1>
         </div>
 
 
-    </div>
 
 
-    <br />
-    <br />
+            <div class="brake"></div>
 
 
 
-    </div>
+            <div class="textfeld"><h3>MYSQL Dienst starten/beenden</h3></div>
+            <div class="textfeld"><p>Als erstes muss man den MySQL Dienst starten. Damit benutzt man den Befehtl über das Init-Skript.
+                    Nägmlich: '/etc/init.d/mysql'. Nachdem man den Befehl eingegeben hat, kommt eine Bestätigung, dass
+                    der MySQL-Server gestartet werden konnte. Von nun an läuft der Dienst selber. Das bedeutet, dass
+                    wenn man das Terminal schliesst, läuft der MySQL Dienst im Hintergrund weiter. Das ist zum Beispiel
+                    vergleichbar mit einer Antivierensoftware. Wenn man das Fenster schliesst, läuft die Anwendung trotzdem
+                    weiter.</p></div>
+                    <div class="textfeld">
+                    <p>Nun muss man noch die Konsole starten, damit man mit MySQL programmieren kann. für dies gibt
+                     man ein 'mysql -u root -p'. Hierbei steht '-u' für 'user' und '-p' dafür, damit das Passwort abgefragt
+                    werden soll. Danach folgt logischerweise eine Passworteingabe.</p></div>
+                    
+                    <div class="textfeld">
+                    <p>Man kann das Passwort für den MySQL Dienst auch beliebig ändern. Für dies, ist folgender Befehl
+                     notwendig: 'set password for root@localhost=Password('DeinPasswort');</p></div>
+             
+
+
+
+
+<hr>
+
+
+
+
+
+
+            <div class="textfeld"><h3>Erstellen einer Datenbank</h3></div>
+            <div class="textfeld"><p>Eine neue Datenbank erstellt man ganz einfach mit: 'create database archiv;'. Nun hat man eine
+                    neue Datenbank erstellt und sie, wie man sieht, nach 'archiv' benannt. Nun kann man diese Datenbank
+                    (die jetzt natürlich leer ist) anzeigen lassen mit: 'show databases;'. Nun wird eine Liste angezeigt
+                    mit allen Datenbanken, die auf diesem Computer bei MySQL registriert sind. In diesem Fall nur eine,
+                    nähmlich 'archiv'. Alle anderen, die zu sehen sind, werden automatisch beim Download von MySQL erstellt
+                    und sind für diesen Dienst notwendig.</p>  </div>
+                
+                   
+                    <div class="img"><img src="img/datenbankerstellen.PNG" alt="Datenbank erstellen"></div>
+
+
+
+
+
+                                <br />
+                                <hr>
+
+
+
+
+
+
+            <div class="textfeld"><h3>Erstellen einer Tabelle</h3></div>
+            <div class="textfeld"><p>In einer Datenbank befindet sich immer einer oder mehrere Tabelle/n. Ohne diese können ja alle
+                    Daten nicht eingetragen werden. Nun erstellen wir eine Tabelle in der Datenbank "archiv", die wir
+                    gerade erstellt haben.</p></div>
+
+            <div class="textfeld"><p>Bevor wir dies tun können, müssen wir allerdings zuerst die Datenbank "archiv" auswählen. Dies
+                    funktioniert mit "use archiv;". Danach "create table akten (aktenID smallint primary key auto_increment,
+                    persoenlich VARCHAR(50));"</p></div>
+
+            <div class="textfeld"><p>"aktenID" und "persoenlich" sind die so genannten Attribute der Tabelle bzw. Spalten-Namen.
+                    "smallint" und "VARCHAR(50)" sind die Tatentypen der Attribute. "smallint" dient zu allen Zahlen,
+                    die kleiner als 32767 sind. Das bedeutet, dass in dieser Spalte (akteID) alle Zahlen hineingeschriebern
+                    werden können die kleiner als 32767 sind. "primary key" bedeutet, dass über (aktenID) die Tabelle
+                    später mit einem "foreign key" verlinkt werden kann. Zusätzlich wird dem Attribut noch "auto_increment"
+                    zugeteilt. Dies bezweckt, dass in der ganzen Spalte (aktenID) zufällige Zahlen generiert werden.</p></div>
+
+            <div class="textfeld"><p>"VARCHAR(50)" sagt dem Attribut, dass in der ganzen Spalte maximal 50 Zeichen, Buchstaben oder
+                    Zahlen hineingeschrieben werden können.</p></div>
+
+
+
+                    <div class="img"><img src="img/tabelleerstellen.PNG" alt="Erstellen einer Tabelle"></div>
+
+
+
+
+
+
+
+                    <br />
+                    <hr>
+
+
+
+
+
+
+                    <div class="textfeld"><h3>Datenbankmodell</h3></div>
+                    <div class="textfeld"><p>Ein Datenbank-Modell beschreibt, wie eine Datenbank aufgebaut ist, welche Verbindungen mehrere 
+                        Entitäten miteinandere haben und welche Primären- und Fremd-Schlüssel Sie besitzen. So ein Modell ist vorallem bei 
+                        relationalen Datenbanken hilfreich, da diese sehr komplex aufgebaut sind. Ein gutes Beispiel ist die obige Datenbank, denn 
+                        sie ist nicht alzu komplex aufgebaut. Microsoft hat eine sehr gute Trainings-Datenbank erstellt, welche man im Internet herunterladen kann, 
+                        das Modell dieser DB sieht wie folgt aus:</p></div>
+                    <div class="img"><img src="img/fabio_sql_modellieren.png" alt="Datenbank-Modell"></div>
+
+
+
+
+
+
+          
+
+
+
+
+
+
+                    <br />
+                    <hr>
+
+
+
+
+
+
+            <div class="textfeld"><h3>Tabelle bearbeiten</h3></div>
+            <div class="textfeld"><p>Wenn man eine Tabelle mit deren Inhalt erstellt hat, aber noch gerne ein weiteres Attribut
+                    hinzufügen möchte, ist folgender Befehl hilfreich:</p></div>
+            <div class="textfeld"><p>ALTER TABLE akten ADD column Kommentar VARCHAR(100);</p></div>
+
+            <div class="img"><img src="img/describeakten1.PNG" alt="DESCRIBE akten"></div>
+            <br />
+            <div class="img"><img src="img/altertablearchiv.PNG" alt="Tabelle bearbeiten"></div>
+            <br />
+            <div class="img"><img src="img/describeakten2.PNG" alt="DESCRIBE akten"></div>
+
+            <div class="textfeld"><p>Wie man sieht, wurde der Tabelle akten das Attribut "Kommentar" hinzugefügt.</p></div>
+
+
+
+
+
+            
+            <br />
+            <hr>
+
+
+
+
+
+                
+              
+            <div class="textfeld"><h3>Löschen von Datenbanken und Tabellen</h3></div>
+            <div class="textfeld"><p>Löschen einer Datenbank:</p></div>
+            <div class="img"><img src="img/datenbanklöschen.PNG" alt="Löschen einer Datenbank"></div>
+            <div class="textfeld"><p>Löschen einer Tabelle:</p></div>
+            <div class="img"><img src="img/tabellelöschen.PNG" alt="Löschen einer Tabelle"></div>
+
+
+
+
+
+
+            <br />
+            <hr>
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="textfeld"><h3>Datentypen und deren Funktion</h3></div>
+
+            
+            <dt>VARCHAR</dt>
+                <dd>Steht für Texte, die keine fixe Länge besitzen wie z.B Kommentare / VARCHAR(50) = maximal 50 Zeichen</dd>
+                <br />
+                <dt>CHAR</dt>
+                <dd>Steht für Texte, die eine fixe Länge besitzen wie z.B Ja oder NEIN. / CHAR(4) = maximal 4 Buchstaben
+                        (nein)
+                </dd>
+                <br />
+                <dt>SMALLINT</dt>
+                <dd>Für alle Zahlen, die sich unter 32767 befinden / smallint = &#x3C;32767</dd>
+                <br />
+                <dt>YEAR</dt>
+                <dd>Für Jahreszahlen wie "1990" oder "2019" / YEAR</dd>
+                <br />
+                <dt>INT / INTEGER</dt>
+                <dd>Steht für alle Zahlen, beliebige Grösse / INT / INTEGER</dd>
+                
+        
+
+
+
+                <br />
+                <hr>
+
+
+
+
+
+
+
+
+
+            <div class="textfeld"><h3>User erstellen und Rechte geben</h3></div>
+            <div class="textfeld"><p>Einen MySQL User erstellen:</p></div>
+            <div class="textfeld"><p>CREATE USER hans@localhost IDENTIFIED BY 'passwort';</p></div>
+            <div class="textfeld"><p>"@localhost" steht für lokal bzw. hans = lokaler Benutzer, "IDENTIFIED BY 'passwort'" = Passwortvergabe
+                    des Benutzers.</p></div>
+
+            <div class="img"><img src="img/usererstellen.PNG" alt="Neuer User erstellen"></div>
+            <div class="textfeld"><p>Nun kann man diesem Benutzer noch beliebige Rechte hinzufügen. Zum Beispiel alle Rechte:</p></div>
+            <div class="textfeld"><p>GRANT ALL ON archiv.* to hans@localhost IDENTIFIED BY 'rootpasswort' WITH GRANT OPTION;</p></div>
+
+
+
+
+    
+      
+            <br />
+            <hr>
+    
+    
+
+
+            <div class="textfeld"><h3>Datensätze importieren</h3></div>
+            <div class="textfeld"><p>In eine Tabelle gehören logischerweise auch Daten. Da die ungerne in SQL selber hineingeschrieben
+                    werden, importiert man sie meistens aus einer Excel-Tabelle.</p></div>
+
+            <div class="textfeld"><p>Im folgendem Befehl werden Daten vom Ordner "Downloads" in die Tabelle "akten" importiert.</p></div>
+
+            <div class="textfeld"><p>LOAD DATA LOCAL INFILE '/home/m105/Downloads/akten.sql' INTO table akten FIELDS TERMINATED
+                    BY ';' ;</p></div>
+
+            <div class="textfeld"><p>Nun kann man mit "select * from akten ;" alle Daten, die gerade importiert wurden anzeigen
+                    lassen.</p></div>
+
+            <div class="textfeld"><p>Hierbei steht "FIELDS TERMINATED BY ;" dafür, dass die einzelnen Zeilen und Spalten in der
+                    Datei durch ";" getrennt sind. Nur so kann MySQL die Datensätze richtig lesen und importieren.</p></div>
+
+
+
+
+
+
+             
+
+
+
+
+
+
+
+                <br /> 
+                <hr>     
+
+
+
+
+
+
+
+
+
+
+                <div class="textfeld"><h3>JOINS</h3></div>
+                <div class="textfeld"><p>Die Aufgabe von JOINS ist es, mehrere Tabellen in einer Abfrage (Query) zu verknüpfen, damit der 
+                    Mitarbeiter zum Beispiel auslesen kann, welche 
+                    Produkte ein Kunde bestellt hat, was hat er für einen Gesamtbestellwert und noch vieles mehr. Es gibt vier verschiedene Arten von 
+                    JOINS, das schwierige ist aber zu merken, wann welcher JOIN gebraucht wird. Ein JOIN wird immer mit dem Primären und dem Fremd-Schlüssel 
+                    zweier Tabellen gemacht. Diese Keys sollten einem bekannt sein, denn ansonsten ist ein JOIN nicht möglich. 
+                    Hier ein Beispiel von einem Schlüsselpaar:</p></div>
+                <div class="textfeld"><p>Die Aufgabe von JOINS ist es, mehrere Tabellen in einer Abfrage (Query) zu verknüpfen, damit der Mitarbeiter zum Beispiel 
+                    auslesen kann, welche Produkte ein Kunde bestellt hat, was hat er für einen Gesamtbestellwert und noch vieles mehr. Es gibt vier verschiedene Arten von JOINS, 
+                    das schwierige ist aber zu merken, wann welcher JOIN gebraucht wird. Ein JOIN wird immer mit dem Primären und dem Fremd-Schlüssel zweier Tabellen gemacht. Diese Keys 
+                    sollten einem bekannt sein, denn ansonsten ist ein JOIN nicht möglich. Hier ein Beispiel von einem Schlüsselpaar:</p></div>
+                    <div class="img"><img src="img/schlüsselpaar.PNG" alt="schlüsselpaar"></div>
+                    <div class="textfeld"><p><b><i>(INNER) JOIN</i></b></p></div>
+                    <div class="textfeld"><p>Der INNER JOIN oder auch nur "JOIN" ist der, der am meisten verwendet wird. Er ist dafür da, um mehrere Attribute zu selektieren. 
+                        Das funktioniert in erster Linie ganz eifnach. Wie man unten im Syntax sieht wird als erstes das Attribut angewählt, welches dann später relevant sein wird. Danach 
+                        wird geschrieben, von welcher Tabelle man das Attribut zieht und zu welcher es verlinkt werden soll (JOIN B also Tabelle B). Wie man oben im Schlüsselpaar sieht, gibt es 
+                        zwei verschiedene Keys. Der Primary-(Gelb) und der Foreign key(Rot). Es muss immer der primary key mit dem Foreign key verlinkt werden und nicht umgekehrt. Ansonsten funktioniert das ganze nicht.
+                        Das bedeutet, dass wenn man z.B mehrere Tabellen verlinken möchte, kann es sein, dass man auf die nächste Tabelle zurück verlinken muss, da diese kein primary besitzt. <i>Syntax:</i></p></div>
+                        <div class="img"><img src="img/innerjoinSQL.PNG" alt="Inner JOIN"></div>
+                        <br />
+                        <div class="textfeld"><p><b><i>Left/Right Inner JOIN</i></b></p></div>
+                        <div class="textfeld"><p>Der Left/Right Inner JOIN braucht man erstaunlich wenig. Er kommt erst zum Einsatz, wenn man zum Beispiel Produkte anzeigen lassen möchte, 
+                            die noch nie bestellt wurden. Praktisch für alle Abfragen, die so zu sagen "Negativ" sind. <i>Syntax:</i></p></div>
+                        <div class="img"><img src="img/leftinnerjoinSQL.PNG" alt="Left/Right inner JOIN"></div>
+                        <br />
+                        <div class="textfeld"><p><b><i>Full Outer JOIN</i></b></p></div>
+                        <div class="textfeld"><p>Der Full Outer JOIN wird noch weniger verwendet als der Left/Right inner JOIN. Er wird benötigt, wenn man zum Beispiel von einer Datenbank 
+                            alle Bestellungen von allen Kunden anzeigen lassen will. Speziell an dem Full Outer jOIN ist, dass dieser zwei Selektierungsanfragen besitzt (SELECT). Darum wird auch 
+                            der Befehl "UNION" gebraucht. <i>Syntax:</i></p></div>
+                        <div class="img"><img src="img/fullouterjoinSQL.PNG" alt="Full Outer JOIN"></div>
+                        <br />
+                        <div class="textfeld"><p><b><i>Right/Left Outer JOIN</i></b></p></div>
+                        <div class="textfeld"><p>Der LEFT/RIGHT OUTER JOIN funktioniert wie der LEFT INNER JOIN nur ohne die WHERE-Abfrage am Schluss. Dieser JOIN könnte in der Northwind-Datenbank 
+                            verwendet werden, um alle Produkte anzuzeigen, welche gekauft und nicht gekauft worden sind.</p></div>
+                        <div class="img"><img src="img/rightouterjoinSQL.PNG" alt="Left/Right Outer JOIN"></div>
+                        <br />
+                        <div class="textfeld"><p><b><i>JOIN-Modelle:</i></b></p></div>
+                        <div class="textfeld"><p>Die grau markierten Bereiche stellt die Ausgabe der Selektierung dar. Beim <i>INNER JOIN</i> wäre das eine Schnittfläche zwischen beiden Kreisen.</p></div>
+                        <br />
+                        <div class="img"><img src="img/InnerJOIN.PNG" alt="Inner JOIN Bild"></div>
+                        <br />
+                        <div class="textfeld"><p>Beim <i>Left/Right INNER JOIN ist die Ausgabe die gekennzeichnete Fläche entweder links oder Rechts.</i></p></div>
+                        <div class="img"><img src="img/LeftInnerJOIN.PNG" alt="Left/Right Inner JOIN Bild"></div>
+                        <br />
+                        <div class="textfeld"><p>Beim <i>FULL OUTER JOIN</i> sind alle Flächen markiert. Man braucht ja alle Kunden, alle Produkte, alle Produkte, die schon bestellt wurden, 
+                        alle Produkte, die noch nie bestellt wurden, alle Kunden, die schon bestellt haben und alle Kunden, die noch keine Bestellung aufgegeben haben.</p></div>
+                        <div class="img"><img src="img/FULLOUTERJOIN.PNG" alt="Full Outer Join Bild"></div>
+                        <br />
+                        <div class="textfeld"><p>Zu guter letzt noch der <i>RIGHT/LEFT OUTER JOIN.</i> Dieser funktioniert wie der LEFT INNER JOIN nur ohne die WHERE-Abfrage am Schluss. Dieser JOIN könnte ¨
+                            in der Datenbank verwendet werden, um alle Produkte anzuzeigen, welche gekauft und nicht gekauft worden sind.</p></div>
+                            <div class="img"><img src="img/RightOuterJOIN.PNG" alt="Right/Left Outer JOIN"></div>
+                            <br />
+                          
+
+
+                        <div class="textfeld"><h3>Sprachschichten in SQL</h3></div>
+                        <div class="textfeld"><p>Jeder Befehl in MySQL gehört zur irgend einer Sprachschicht. Eine Sprachschicht beinhaltet eine handvoll Kommandos zum erstellen von Datenbanken, erstellen von 
+                        Tabellen, Bearbeiten einer DB/Tabelle, Vergabe von Benutzerrechten, Hinzufügen oder Bearbeiten von Datensätzen und um Datensätze auszulesen. Hier geht es zu den 4 verschiedenen Sprachschichten:</p></div>
+                        <div class="textfeld">
+
+                                <ul>
+
+                                        <li>Data Definition Language</li>
+                                        <li>Data Queri Language</li>
+                                        <li>Data Control Language</li>
+                                        <li>Data Manipulation Language</li>
+
+                                </ul>
+
+                        </div>
+                        <div class="textfeld"><p><b><i>Data Definition Language</i></b></p></div>
+                        <div class="textfeld"><p>Die Data Definition Language umfängt drei Befehle: ALTER, CREATE und DROP. ALTER wird benötigt, um Datenbanken und 
+                                Tabellen zu bearbeiten. Mit CREATE erstelle man DB und TB und mit DROP kann man diese löschen. <i>Folgende Syntax zeigen die Funktion:</i>
+                        </p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <br />
+                    <hr>
+                    <br />
+
+                    
+
+
+
+
+                    <div class="textfeld"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>    
 </body>
-
 </html>
