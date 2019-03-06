@@ -274,10 +274,30 @@ width: 35em;
 
 }
 
+}
+
+@media (max-width: 1010px) {
+
+
+.bildmedia {
+
+width: 35em;
+
+}
+
+
+}
+
+@media (max-width: 730px) {
 
 
 
+.bildmedia {
 
+width: 27em;
+height: 5em;
+
+}
 
 
 }
