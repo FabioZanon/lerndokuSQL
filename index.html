@@ -128,7 +128,7 @@
                     <div class="textfeld"><h3 id="anker4">Datenbankmodell</h3></div>
                     <div class="textfeld"><p>Ein Datenbank-Modell beschreibt, wie eine Datenbank aufgebaut ist, welche Verbindungen mehrere 
                         Entitäten miteinandere haben und welche Primären- und Fremd-Schlüssel Sie besitzen. So ein Modell ist vorallem bei 
-                        relationalen Datenbanken hilfreich, da diese sehr komplex aufgebaut sind. Ein gutes Beispiel ist die obige Datenbank, denn 
+                        relationalen Datenbanken hilfreich, da diese sehr komplex aufgebaut sind. Ein gutes Beispiel ist die Datenbank unten, denn 
                         sie ist nicht alzu komplex aufgebaut. Microsoft hat eine sehr gute Trainings-Datenbank erstellt, welche man im Internet herunterladen kann, 
                         das Modell dieser DB sieht wie folgt aus:</p></div>
                     <div class="img"><img src="img/fabio_sql_modellieren.png" alt="Datenbank-Modell"></div>
@@ -403,14 +403,38 @@
                         <br />
 
                         <div class="textfeld"><p><b><i>Data Manipulation Language</i></b></p></div>
-                        <div class="textfeld"><p>In der Data Manipulation Language verbergen sich wieder drei Haupt-Befehle. INSERT, UPDATE und DELETE.
+                        <div class="textfeld"><p>In der DML verbergen sich erneut drei Haupt-Befehle. INSERT, UPDATE und DELETE. Der Unterschied zwischen 
+                            INSERT und UPDATE besteht darin, dass man beim INSERTEN neue Datensätze <b>hinzufügt</b> und mit UPDATE Datensätze <b>ersetzt.</b>
                         </p></div>
+                        <div class="textfeld"><p><i>Mit INSERT INTO kann man einen neuen Datensatz einfügen:</i></p></div>
+                        <div class="img"><img src="img/InsertBefehl.PNG" alt="Den INSERT Befehl richtig anwenden"></div>
+                        <div class="textfeld"><p>Mit UPDATE können Datensätze geändert werden, im SET-Teil wird der neue Wert eingetragen. 
+                        Es sollte unbedingt auf den WHERE-Teil geachtet werden, sonst werden alle Werte überschrieben. Die Syntax sieht folgendermassen aus:</p></div>
+                        <div class="img"><img src="img/INSERTVALUES.PNG" alt="DEN INSERT Befehl richtig anwenden"></div>
+                        <div class="textfeld"><p>In diesem Fall wird überall, wo "x=0" ist, entsprechend Inhalt hinzugefügt.</p></div>
+                        <div class="textfeld"><p>Folgender Syntax zeigt, wie man den <b><i>UPDATE Befehl</i></b> richtig anwendet:</p></div>
+                        <div class="img"><img src="img/UPDATE.PNG" alt="UPDATE Befehl richtig anwenden"></div>
+                        <div class="textfeld"><p>Mit <b>DELETE</b> können <b>Datensätze</b> gelöscht werden, hierbei muss aber auf die WHERE-Bedingung geachtet werden,
+                         wenn keine Bedingung definiert ist, werden alle Datensätze gelöscht. Dies ist im ersten Beispiel der Fall.</p></div>
+                        <div class="img"><img src="img/DELETEFrom.PNG" alt="DELETE Befehl richtig anwenden"></div>
+
+
 
 
 
 
                         <br />
                         <hr>
+
+
+
+
+
+
+
+
+
+                        <div class="textfeld"><h3></h3></div>
 
 
 
