@@ -262,3 +262,22 @@ border-radius: 100px;
   color: black;
 
 }
+
+@media (max-width: 800px) {
+
+
+
+.bildmedia {
+
+width: 35em;
+
+
+}
+
+
+
+
+
+
+
+}
