@@ -240,3 +240,25 @@ display: flex;
 justify-content: center;
 
 }
+
+
+.home {
+
+display: flex;
+justify-content: center;
+margin: 0 auto;
+height: 2em;
+max-width: 2em;
+background-color: #cb6040;
+border-radius: 100px;
+
+
+}
+
+
+.footertext {
+
+  margin-top: 4px;
+  color: black;
+
+}
