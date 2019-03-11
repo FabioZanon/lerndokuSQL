@@ -260,6 +260,7 @@
             <div class="img"><img src="img/usererstellen.PNG" alt="Neuer User erstellen" class="bildmedia4 "></div>
             <div class="textfeld"><p>Nun kann man diesem Benutzer noch beliebige Rechte hinzufügen. Zum Beispiel alle Rechte:</p></div>
             <div class="textfeld"><p>GRANT ALL ON archiv.* to hans@localhost IDENTIFIED BY 'rootpasswort' WITH GRANT OPTION;</p></div>
+            <div class="textfeld"><p>WITH GRANT OPTION bedeutet, dass dieser Benutzer die selben Rechte an einem anderen Benutzer weitergeben kann.</p></div>
 
 
 
@@ -332,42 +333,28 @@
                         zwei verschiedene Keys. Der Primary-(Gelb) und der Foreign key(Rot). Es muss immer der primary key mit dem Foreign key verlinkt werden und nicht umgekehrt. Ansonsten funktioniert das ganze nicht.
                         Das bedeutet, dass wenn man z.B mehrere Tabellen verlinken möchte, kann es sein, dass man auf die nächste Tabelle zurück verlinken muss, da diese kein primary besitzt. <i>Syntax:</i></p></div>
                         <div class="img"><img src="img/innerjoinSQL.PNG" alt="Inner JOIN"></div>
+                        <div class="img"><img src="img/InnerJOIN.PNG" alt="Inner JOIN Bild" class="bildmedia5"></div>
                         <br />
                         <div class="textfeld"><p><b><i>Left/Right Inner JOIN</i></b></p></div>
                         <div class="textfeld"><p>Der Left/Right Inner JOIN braucht man erstaunlich wenig. Er kommt erst zum Einsatz, wenn man zum Beispiel Produkte anzeigen lassen möchte, 
                             die noch nie bestellt wurden. Praktisch für alle Abfragen, die so zu sagen "Negativ" sind. <i>Syntax:</i></p></div>
                         <div class="img"><img src="img/leftinnerjoinSQL.PNG" alt="Left/Right inner JOIN"></div>
+                        <div class="img"><img src="img/LeftInnerJOIN.PNG" alt="Left/Right Inner JOIN Bild" class="bildmedia5"></div>
                         <br />
                         <div class="textfeld"><p><b><i id="verlinkung">Full Outer JOIN</i></b></p></div>
                         <div class="textfeld"><p>Der Full Outer JOIN wird noch weniger verwendet als der Left/Right inner JOIN. Er wird benötigt, wenn man zum Beispiel von einer Datenbank 
                             alle Bestellungen von allen Kunden anzeigen lassen will. Speziell an dem Full Outer jOIN ist, dass dieser zwei Selektierungsanfragen besitzt (SELECT). Darum wird auch 
                             der Befehl "UNION" gebraucht. <i>Syntax:</i></p></div>
                         <div class="img"><img src="img/fullouterjoinSQL.PNG" alt="Full Outer JOIN"></div>
+                        <div class="img"><img src="img/FULLOUTERJOIN.PNG" alt="Full Outer Join Bild" class="bildmedia5"></div>
                         <br />
                         <div class="textfeld"><p><b><i>Right/Left Outer JOIN</i></b></p></div>
                         <div class="textfeld"><p>Der LEFT/RIGHT OUTER JOIN funktioniert wie der LEFT INNER JOIN nur ohne die WHERE-Abfrage am Schluss. Dieser JOIN könnte in der Northwind-Datenbank 
                             verwendet werden, um alle Produkte anzuzeigen, welche gekauft und nicht gekauft worden sind.</p></div>
                         <div class="img"><img src="img/rightouterjoinSQL.PNG" alt="Left/Right Outer JOIN"></div>
+                        <div class="img"><img src="img/RightOuterJOIN.PNG" alt="Right/Left Outer JOIN" class="bildmedia5"></div>
                         <br />
-                        <div class="textfeld"><p><b><i>JOIN-Modelle:</i></b></p></div>
-                        <div class="textfeld"><p>Der grau markierte Bereich stellt die Ausgabe der Selektierung dar. Beim <i>INNER JOIN</i> wäre das eine Schnittfläche zwischen beiden Kreisen.</p></div>
-                        <br />
-                        <div class="img"><img src="img/InnerJOIN.PNG" alt="Inner JOIN Bild" class="bildmedia5"></div>
-                        <br />
-                        <div class="textfeld"><p>Beim <i>Left/Right INNER JOIN ist die Ausgabe die gekennzeichnete Fläche entweder links oder Rechts.</i></p></div>
-                        <div class="img"><img src="img/LeftInnerJOIN.PNG" alt="Left/Right Inner JOIN Bild" class="bildmedia5"></div>
-                        <br />
-                        <div class="textfeld"><p>Beim <i>FULL OUTER JOIN</i> sind alle Flächen markiert. Man braucht ja alle Kunden, alle Produkte, alle Produkte, die schon bestellt wurden, 
-                        alle Produkte, die noch nie bestellt wurden, alle Kunden, die schon bestellt haben und alle Kunden, die noch keine Bestellung aufgegeben haben.</p></div>
-                        <div class="img"><img src="img/FULLOUTERJOIN.PNG" alt="Full Outer Join Bild" class="bildmedia5"></div>
-                        <br />
-                        <div class="textfeld"><p>Zu guter letzt noch der <i>RIGHT/LEFT OUTER JOIN.</i> Dieser funktioniert wie der LEFT INNER JOIN nur ohne die WHERE-Abfrage am Schluss. Dieser JOIN könnte ¨
-                            in der Datenbank verwendet werden, um alle Produkte anzuzeigen, welche gekauft und nicht gekauft worden sind.</p></div>
-                            <div class="img"><img src="img/RightOuterJOIN.PNG" alt="Right/Left Outer JOIN" class="bildmedia5"></div>
-                            <br />
-                          
-                            <hr>
-
+                       
                         <div class="textfeld"><h3 id="anker11">Sprachschichten in SQL</h3></div>
                         <div class="textfeld"><p>Jeder Befehl in MySQL gehört zur irgend einer Sprachschicht. Eine Sprachschicht beinhaltet eine handvoll Kommandos zum erstellen von Datenbanken, erstellen von 
                         Tabellen, Bearbeiten einer DB/Tabelle, Vergabe von Benutzerrechten, Hinzufügen oder Bearbeiten von Datensätzen und um Datensätze auszulesen. Hier geht es zu den 4 verschiedenen Sprachschichten:</p></div>
