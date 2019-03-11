@@ -25,39 +25,33 @@
                     <a href="#anker9">Datensätze importieren</a>
                     <a href="#anker10">JOINS</a>
                     <a href="#anker11">Sprachschichten</a>
+                    <a href="#anker12">Funktionen & Operatoren</a>
             </div>
         </div>
         <div class="divdoku">
             <h1><i id="ankersonder">Lerndokumentation über SQL</i></h1>
+            
         </div>
+        <div class="divdoku2">
+        <h1 class="none"><i id="ankersonder">SQL</i></h1>
+    </div>
+
         <div class="brake"></div>
 
-       <div class="none2">
-        <div class="dropdown" id="none">
-                <button class="dropbtn">MySQL</button>
-                <div class="dropdown-content">
-                        <a href="#anker1">MySQL Dienst starten/beenden</a>
-                        <a href="#anker2">Erstellen einer Datenbank</a>
-                        <a href="#anker3">Erstellen einer Tabelle</a>
-                        <a href="#anker4">Datenbank-Modell</a>
-                        <a href="#anker5">Tabelle bearbeiten</a>
-                        <a href="#anker6">Löschen von Datenbanken und Tabellen</a>
-                        <a href="#anker7">Datentypen und deren Funktion</a>
-                        <a href="#anker8">User erstellen und Rechte vergeben</a>
-                        <a href="#anker9">Datensätze importieren</a>
-                        <a href="#anker10">JOINS</a>
-                        <a href="#anker11">Sprachschichten</a>
-                </div>
-            </div>
-        </div>
+    
         
 
 
 
             <div class="brake"></div>
             <div class="brake"></div>
+            <div class="textfeld"><h3>MySQL Dienst installieren</h3></div>
+            <div class="textfeld"><p><i>Diese Lerndokumentation basiert auf die Linux Distribution Elementary OS. Zum Download des MySQL Dienstes hilft 
+                folgender Befehl: <b>sudo apt-get install mysql-server mysql-client</b>
+            </i></p></div>
+            <div class="img"><img src="img/installMySQL.PNG" alt="MySQL Installation" class="bildmedia"></div>
 
-
+            <div class="brake"></div>
 
             <div class="textfeld"><h3 id="anker1">MYSQL Dienst starten/beenden</h3></div>
             <div class="textfeld"><p>Als erstes muss man den MySQL Dienst starten. Damit benutzt man den Befehtl über das Init-Skript.
@@ -87,15 +81,15 @@
 
 
             <div class="textfeld"><h3 id="anker2">Erstellen einer Datenbank</h3></div>
-            <div class="textfeld"><p>Eine neue Datenbank erstellt man ganz einfach mit: 'create database archiv;'. Nun hat man eine
-                    neue Datenbank erstellt und sie, wie man sieht, nach 'archiv' benannt. Nun kann man diese Datenbank
-                    (die jetzt natürlich leer ist) anzeigen lassen mit: 'show databases;'. Nun wird eine Liste angezeigt
-                    mit allen Datenbanken, die auf diesem Computer bei MySQL registriert sind. In diesem Fall nur eine,
-                    nähmlich 'archiv'. Alle anderen, die zu sehen sind, werden automatisch beim Download von MySQL erstellt
-                    und sind für diesen Dienst notwendig.</p>  </div>
+            <div class="textfeld"><p>Eine neue Datenbank erstellt man ganz einfach mit: 'create database dbBeispiel;'. Nun hat man eine
+                    neue Datenbank erstellt und sie nach 'dbBeispiel' benannt. Diese Datenbank
+                    (die jetzt natürlich leer ist) kann man anzeigen lassen mit: 'show databases;'. Nun wird eine Liste angezeigt
+                    mit allen Datenbanken, die auf diesem Computer bei MySQL registriert sind. Unter anderen 'dbBeispiel'. Es empfiehlt sich jedoch, beim 
+                    erstellen der Datenbank, 'CHARACTER SET UTF8' 
+                    anzuwenden. Dies ermöglicht die Sonderbuchstaben 'ä', 'ö' und 'ü'.</p>  </div>
                 
                    
-                    <div class="img"><img src="img/datenbankerstellen.PNG" alt="Datenbank erstellen"></div>
+                    <div class="img"><img src="img/CHARACTERsetUTF8.PNG" alt="Datenbank erstellen"></div>
 
 
 
@@ -119,11 +113,11 @@
                     persoenlich VARCHAR(50));"</p></div>
 
             <div class="textfeld"><p>"aktenID" und "persoenlich" sind die so genannten Attribute der Tabelle bzw. Spalten-Namen.
-                    "smallint" und "VARCHAR(50)" sind die Tatentypen der Attribute. "smallint" dient zu allen Zahlen,
+                    "smallint" und "VARCHAR(50)" sind die Datentypen der Attribute. "smallint" dient zu allen Zahlen,
                     die kleiner als 32767 sind. Das bedeutet, dass in dieser Spalte (akteID) alle Zahlen hineingeschriebern
                     werden können die kleiner als 32767 sind. "primary key" bedeutet, dass über (aktenID) die Tabelle
                     später mit einem "foreign key" verlinkt werden kann. Zusätzlich wird dem Attribut noch "auto_increment"
-                    zugeteilt. Dies bezweckt, dass in der ganzen Spalte (aktenID) zufällige Zahlen generiert werden.</p></div>
+                    zugeteilt. Dies bezweckt, dass in der ganzen Spalte (aktenID) immer eine Zahl höher generiert wird. Also das z.B nach '5' die '6' kommt.</p></div>
 
             <div class="textfeld"><p>"VARCHAR(50)" sagt dem Attribut, dass in der ganzen Spalte maximal 50 Zeichen, Buchstaben oder
                     Zahlen hineingeschrieben werden können.</p></div>
@@ -224,7 +218,7 @@
             
             <div class="textfeld"><h3 id="anker7">Datentypen und deren Funktion</h3></div>
 
-            
+            <div class="textfeld"><p><i>Hier werden nur die gängigsten Datentypen beschrieben. <a href="https://www.w3schools.com/sql/sql_datatypes.asp" target="_blank">Hier</a> ist der Link zu allen Datentypen.</i></p></div>
             <dt>VARCHAR</dt>
                 <dd>Steht für Texte, die keine fixe Länge besitzen wie z.B Kommentare / VARCHAR(50) = maximal 50 Zeichen</dd>
                 <br />
@@ -292,6 +286,7 @@
 
             <div class="textfeld"><p>Hierbei steht "FIELDS TERMINATED BY ;" dafür, dass die einzelnen Zeilen und Spalten in der
                     Datei durch ";" getrennt sind. Nur so kann MySQL die Datensätze richtig lesen und importieren.</p></div>
+                    
 
 
 
@@ -320,7 +315,7 @@
 
                 <div class="textfeld"><h3 id="anker10">JOINS</h3></div>
                 <div class="textfeld"><p>Die Aufgabe von JOINS ist es, mehrere Tabellen in einer Abfrage (Query) zu verknüpfen, damit der 
-                    Mitarbeiter zum Beispiel auslesen kann, welche 
+                    Mitarbeiter zum Beispiel auslesen kann,
                     Produkte ein Kunde bestellt hat, was hat er für einen Gesamtbestellwert und noch vieles mehr. Es gibt vier verschiedene Arten von 
                     JOINS, das schwierige ist aber zu merken, wann welcher JOIN gebraucht wird. Ein JOIN wird immer mit dem Primären und dem Fremd-Schlüssel 
                     zweier Tabellen gemacht. Diese Keys sollten einem bekannt sein, denn ansonsten ist ein JOIN nicht möglich. 
@@ -355,7 +350,7 @@
                         <div class="img"><img src="img/rightouterjoinSQL.PNG" alt="Left/Right Outer JOIN"></div>
                         <br />
                         <div class="textfeld"><p><b><i>JOIN-Modelle:</i></b></p></div>
-                        <div class="textfeld"><p>Die grau markierten Bereiche stellt die Ausgabe der Selektierung dar. Beim <i>INNER JOIN</i> wäre das eine Schnittfläche zwischen beiden Kreisen.</p></div>
+                        <div class="textfeld"><p>Der grau markierte Bereich stellt die Ausgabe der Selektierung dar. Beim <i>INNER JOIN</i> wäre das eine Schnittfläche zwischen beiden Kreisen.</p></div>
                         <br />
                         <div class="img"><img src="img/InnerJOIN.PNG" alt="Inner JOIN Bild" class="bildmedia5"></div>
                         <br />
@@ -454,8 +449,8 @@
 
 
 
-                        <div class="textfeld"><h3>Funktionen und Operatoren</h3></div>
-                        <div class="textfeld"></div>
+                        <div class="textfeld" id="anker12"><h3>Funktionen und Operatoren</h3></div>
+                        <div class="textfeld"><p><i>Link zu allen Funktionen: <a href="https://www.w3schools.com/sql/sql_ref_sqlserver.asp" target="_blank">W3SCHOOLS</a></i></p></div>
                         <div class="textfeld"><h3><i>Gruppenfunktionen</i></h3></div>
                         <table class="table_small">
                                 <tbody>
